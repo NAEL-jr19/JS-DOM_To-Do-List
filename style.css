@@ -1,0 +1,227 @@
+/* ===== Pengaturan dasar ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 16px;
+    background: linear-gradient(50deg, #0a0e19 0%, #162c24 19%, #0a0e19 50%, #181433  70%, #0a0e19 100%);
+    font-family: "texturina", sans-serif;
+    color: #1e293b;
+}
+
+/* ===== Kartu utama ===== */
+.kartu {
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    background: linear-gradient(165deg, #432742ea 0%, #181433 20%, #121413ea 50%, #162c24 80%, #432742ea 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(79, 70, 229, 0.12);
+}
+
+.header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: "rubik iso", cursive;
+    font-size: 39px;
+    font-weight: 700;
+    color: #00f3ff;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.subjudul {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #e2e8f0;
+    letter-spacing: 0,5px;
+}
+
+.bagian-input {
+    display: flex;
+    width: 100%;
+    border: 2px solid #8517df;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#input-tugas {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-family: "texturina", sans-serif;
+}
+
+#input-tugas:focus {
+    border-color: #1717da;
+    background-color: #ffffff;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    font-family: "texturina", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#btn-tambah {
+    padding: 6px 12px; 
+    background-color: #8517df;
+    align-self: center;
+    margin: 5px;
+    border-radius: 17px;
+}
+
+#btn-tambah:hover {
+    background-color: #af70e3;
+}
+
+.list-container {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ===== Rekap statistik ===== */
+.statistik {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.kotak-statistik {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px 2px;
+    border-radius: 14px;
+}
+
+.angka {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-top: 1px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Tiga warna berbeda untuk tiap statistik */
+.yang-total {
+    background-color: #eef2ff;
+    color: #4338ca;
+}
+
+.yang-belum {
+    background-color: #ffe3e3;
+    color: #f60707;
+}
+
+.yang-selesai {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* ===== Daftar tugas ===== */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item-tugas {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1px 4px;
+    margin-bottom: 10px;
+    background-color: hsl(117, 49%, 25%);
+    border: 1px solid #4de77695;
+    border-radius: 14px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.item-tugas:hover {
+    background-color: #42ba3b;
+    border-color: #c7d2fe;
+}
+
+/* accent-color mewarnai checkbox bawaan browser */
+.item-tugas input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+    accent-color: #6366f1;
+    cursor: pointer;
+}
+
+.teks-tugas {
+    flex: 1;
+    font-size: 15px;
+    word-break: break-word;
+}
+
+.btn-hapus {
+    padding: 7px 14px;
+    font-size: 13px;
+    background-color: #fee2e2;
+}
+
+.btn-hapus:hover {
+    color: #ffffff;
+    background-color: #ef4444;
+}
+
+/* ===== Tugas selesai: teks dicoret dan warna hijau lembut ===== */
+.item-tugas.selesai {
+    background-color: #182d1e;
+    border-color: #bbf7d0;
+}
+
+.item-tugas.selesai .teks-tugas {
+    text-decoration: line-through;
+    opacity: 0.7;
+    color: #94a3b8;
+}
+
+.main-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: #64748b;
+}
+
+.hidden {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.sembunyi {
+    display: none;
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum JavaScript DOM — To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="kartu">
+      <!-- Judul -->
+      <header class="header">
+        <h1>To Do List</h1>
+        <p class="subjudul">
+          Biar Gak Lupa, Atur Tugasmu dan Pantau Progresmu!
+        </p>
+      </header>
+
+      <!-- Rekap statistik -->
+      <main class="main">
+        <section class="statistik">
+          <div class="kotak-statistik yang-total">
+            <p class="angka" id="total-tugas">0</p>
+            <p class="label">Total Tugas</p>
+          </div>
+          <div class="kotak-statistik yang-belum">
+            <p class="angka" id="tugas-belum">0</p>
+            <p class="label">Belum Selesai</p>
+          </div>
+          <div class="kotak-statistik yang-selesai">
+            <p class="angka" id="tugas-selesai">0</p>
+            <p class="label">Selesai</p>
+          </div>
+        </section>
+
+        <!-- Input tugas -->
+        <div class="bagian-input">
+          <input
+            type="text"
+            id="input-tugas"
+            placeholder="Tulis tugasnya dong ..."
+            autocomplete="off"
+          />
+          <button id="btn-tambah">+ Tambah</button>
+        </div>
+
+        <div class="list-container">
+          <h3>Daftar Tugas (<span id="jumlah-tugas">0</span>):</h3>
+
+          <ul id="daftar-tugas"></ul>
+
+          <p id="pesan-kosong" class="sembunyi">Mana Tugasnya!</p>
+        </div>
+      </main>
+
+      <br />
+
+      <hr />
+      <footer class="main-footer">
+        <p>&copy; 2026 Kireina Elfaradis JS</p>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
